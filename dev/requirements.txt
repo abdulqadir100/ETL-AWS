@@ -1,0 +1,6 @@
+
+dbt-postgres==1.6.0
+SQLAlchemy==2.0.19
+boto3==1.28.25
+python-dotenv==1.0.0
+pandas==2.0.3
