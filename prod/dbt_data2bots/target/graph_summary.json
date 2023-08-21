@@ -1,0 +1,1 @@
+{"_invocation_id": "f24c0769-5b9b-4b87-86cd-a1d45cca206b", "linked": {"0": {"name": "model.dbt_data2bots.agg_public_holiday", "type": "model"}, "1": {"name": "model.dbt_data2bots.agg_shipments", "type": "model"}, "2": {"name": "model.dbt_data2bots.best_performing_product", "type": "model"}}}
