@@ -9,12 +9,13 @@ data2bots_accessement
 - **Airflow** - (required for orchestration. [Airflow Installation Guide](https://airflow.apache.org/docs/apache-airflow/stable/howto/docker-compose/index.html)).
 --Airflow was preferred to crontab for orchestration because it offers the ability to schedule, monitor, and most importantly, scale, increasingly complex workflows.
 - **Docker** - (needed for contenarization). [Docker Installation Guide](https://docs.docker.com/engine/install/)).
+- **Terraform** - (Provision and manage infrastructure in any cloud). [Terraform Installation Guide](https://developer.hashicorp.com/terraform/tutorials/aws-get-started/install-cli)).
 
 ## Architecture
 
-### Extract and Load to Datawarehouse Staging
+### 1. Extract and Load to Datawarehouse Staging
 ![alt text](https://github.com/abdulqadir100/data2bots_accessement/blob/main/architecture/Screenshot%202023-08-21%20at%2016.51.14.png)
 
-### Transform from Datawarehouse Staging to Datawarehouse Analytics 
+### 2. Transform from Datawarehouse Staging to Datawarehouse Analytics 
 ![alt text](https://github.com/abdulqadir100/data2bots_accessement/blob/main/architecture/TL.png)
 
