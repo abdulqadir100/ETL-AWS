@@ -35,7 +35,7 @@ def get_secret():
     user = secret_dict["username"]
     pwd = secret_dict["password"]
     driver = "org.postgresql.Driver"
-    url =  "jdbc:postgresql://data2botsdb0.c43zhgoyki2b.us-east-1.rds.amazonaws.com:5432/d2b_accessment"
+    url =  "jdbc:postgresql://insert-db-server-host:5432/d2b_accessment"
     return user,pwd,driver,url
 
 def db_tablename(file):
@@ -65,12 +65,12 @@ def lambda_handler(event, context):
     username,password,driver,jdbc_url  = get_secret()
 
     # location of code to run
-    backend_code="s3://d2b-internal-assessment-bucket-abduafol4283/code-files/emr_script_EL_staging.py"
+    backend_code="s3://insert-bucket-name/code-files/emr_script_EL_staging.py"
     
     # create a transient cluster to run spark job
     response = emr.run_job_flow(
         Name='aws_EL_job_cluster',
-        LogUri='s3://d2b-internal-assessment-bucket-abduafol4283/logs/',
+        LogUri='s3://insert-bucket-name/logs/',
         ReleaseLabel='emr-6.0.0',
         Instances={
             'MasterInstanceType': 'm5.xlarge',
