@@ -7,8 +7,8 @@ def upload_to_s3(local_file):
     current_directory = os.path.dirname(os.path.abspath(__file__))
     file_path = os.path.join(current_directory, local_file)
     try:
-        s3_folder = 'analytics_export/abduafol4283/'
-        bucket_name = "d2b-internal-assessment-bucket"
+        s3_folder = 'insert-folder-name'
+        bucket_name = "insert-bucket-name"
         s3 = boto3.client('s3', config=Config(signature_version=UNSIGNED))
         s3.upload_file(file_path, bucket_name, s3_folder + local_file)
         print("Upload successful!")
