@@ -5,17 +5,17 @@ variable "vpc_name" {
 
 variable "vpc_cidr" {
   description = "Please enter the IP range (CIDR notation) for this VPC"
-  default     = "10.192.0.0/16"
+  default     = "ip-address/16"
 }
 
 variable "public_subnet1_cidr" {
   description = "IP range (CIDR notation) for the public subnet"
-  default     = "10.192.10.0/24"
+  default     = "ip-address/24"
 }
 
 variable "private_subnet1_cidr" {
   description = "IP range (CIDR notation) for the private subnet"
-  default     = "10.192.20.0/24"
+  default     = "ip-address/24"
 }
 
 variable "region" {
@@ -26,7 +26,7 @@ variable "region" {
 variable "account_id" {
   description = "AWS Account ID"
   # Provide your actual AWS Account ID
-  default = "642941490624"
+  default = "your-account-id"
 }
 
 provider "aws" {
